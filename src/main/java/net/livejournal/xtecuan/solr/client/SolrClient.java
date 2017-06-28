@@ -98,11 +98,7 @@ public class SolrClient {
     }
 
     public SolrServer getServer(String collection) throws MalformedURLException {
-        if (server == null) {
-            return new CommonsHttpSolrServer(getCollectionURL(collection));
-        } else {
-            return server;
-        }
+        return new CommonsHttpSolrServer(getCollectionURL(collection));
     }
 
     public SolrServer getOutcomeServer() throws MalformedURLException {
